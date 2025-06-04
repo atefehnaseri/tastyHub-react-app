@@ -2,7 +2,7 @@ function Home() {
   return (
     <div>
       <h1>
-        The best pizza.
+        The best pizza ever.
         <br />
         Straight out of the oven, straight to you.
       </h1>
