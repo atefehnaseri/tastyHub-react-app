@@ -8,9 +8,11 @@ function AppLayout() {
   const navigation = useNavigation();
   //navigation contains a state property which can be "idle" or "loading"
   const isLoading = navigation.state === "loading";
+  console.log(isLoading);
   return (
     <div className="layout">
       {isLoading && <Loader />}
+
       <Header />
 
       <main>
