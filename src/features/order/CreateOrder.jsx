@@ -51,7 +51,7 @@ function CreateOrder() {
     address,
     error: addressError,
   } = useSelector((state) => state.user);
-  console.log('position', position);
+
   const isLoadingAddress = addressStatus === 'loading';
   const dispatch = useDispatch();
 
