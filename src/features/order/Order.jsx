@@ -1,16 +1,15 @@
+import { useEffect } from 'react';
 import { useFetcher, useLoaderData } from 'react-router-dom';
-import { getOrder } from '../../services/apiRestaurant';
 import OrderItem from './OrderItem';
-
-// Test ID: IIDSAT, CQE92U
-
+import { getOrder } from '../../services/apiRestaurant';
 import {
   calcMinutesLeft,
   formatCurrency,
   formatDate,
 } from '../../utils/helpers';
-import { useEffect } from 'react';
+import UpdateOrder from './UpdateOrder';
 
+// Test ID: IIDSAT, CQE92U
 const order = {
   id: 'ABCDEF',
   customer: 'Jonas',
@@ -123,6 +122,7 @@ function Order() {
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+      {!priority && <UpdateOrder order={order} />}
     </div>
   );
 }
